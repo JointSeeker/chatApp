@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #272727;
+}
+
+.wrapper{
+    width: 450px;
+    border-radius: 20px;
+    background: #0c0c0c;
+    box-shadow: 0 0 130px 0 rgba(255, 255, 255, 0.1),
+                0 32px 64px -50px rgba(255, 255, 255, 0.5);
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* CSS kod přihlašovacího formuláře */
+
+.form {
+    padding: 25px 30px;
+    color: #c4c4c4;
+}
+
+/* nadpis formuláře */
+.form header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #272727;
+}
+
+.form header span {
+    color: #19aa05c0;
+    font-size: 40px;
+}
+
+/* formulař  */
+.form form {
+    margin: 20px 0;
+}
+
+/* error hláška */
+.form form .error-txt {
+    color: #3b0000;
+    background: #d6646480;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 3px solid #701515;
+    display: none;
+}
+
+/*stylování pozicování inputů pomocí Flex-boxu */
+.form form .name-details {
+    display: flex;
+}
+
+form .name-details .field:first-child {
+    margin-right: 10px;
+} 
+
+form .name-details .field:last-child {
+    margin-left: 10px;
+}
+.form form .field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form form .field label {
+    margin-bottom: 2px;
+}
+
+.form form .field input {
+    outline: none;
+}
+
+/* stylování pole */
+.form form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 15px;
+    padding: 0 10px;
+    border: 2px solid rgb(116, 121, 116);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.form form .input input:hover,
+.form form .input input:focus {
+    box-shadow: 0 -1px 5px 3px rgba(153, 153, 153, 0.76),
+                0 1px 5px 3px rgba(238, 238, 238, 0.76);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.form form .image input {
+    font-size: 15px;
+}
+
+.form form .button input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    background: #3b3b3b;
+    color: #c4c4c4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.form form .button input:hover {
+    /* border-bottom: 2px solid rgb(88, 88, 156); */
+    box-shadow: 0 1px 5px 5px rgba(87, 178, 253, 0.76),
+                0 -1px 5px 5px rgba(87, 178, 253, 0.76);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ¸ikonky  */
+
+.form form .field i {
+    position: absolute;
+    right: 15px;
+    color: #c4c4c4;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form form .field i.active::before{
+    color: #701515;
+    content: "\f070";
+}
+
+.form .link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.form .link a {
+    color: #3392ff;
+}
+
+.form .link a:hover {
+    text-decoration: underline;
+}
+  
+
+
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+                    /* User (uživatel) page / sekce */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////// */
+
+.users {
+    padding: 25px 30px;
+    color: #c4c4c4;
+}
+
+.users header,
+.users-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+
+.users .users-list {
+    background: transparent;
+}
+
+:is(.users, .users-list) .content{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.users header .content img {
+    height: 60px;
+    width: 60px;
+}
+
+:is(.users, .users-list) .details {
+    margin-left: 15px;
+    color: #c4c4c4;
+}
+
+:is(.users, .users-list) .details span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.users header .details p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.users header .logout {
+    color: #0c0c0c;
+    background: #9c9c9c;
+    padding: 7px 10px;
+    font-size: 15px;
+    border-radius: 20px 0 20px 20px;
+    font-weight: 600;
+}
+
+.users .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users .search .text {
+    font-size: 15px;
+}
+
+.users .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    border: 2px solid #3b3b3b;
+    border-radius: 10px 0 0 10px;
+    padding: 0 13px;
+    font-size: 16px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+/* pro javascript */
+.users .search input.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.users .search input:hover,
+.users .search input:focus {
+    box-shadow: 0 -1px 5px 3px rgba(153, 153, 153, 0.76),
+                0 1px 5px 3px rgba(238, 238, 238, 0.76);
+    transition: all 0.2s ease-in-out;
+}
+
+.users .search button {
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #0c0c0c;
+    background: #9c9c9c;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+/* pro javascript */
+.users .search button.active{
+    transition: all 0.2s ease;
+    color: #0c0c0c;
+    background: #9c9c9c;
+}
+
+.users .search button.active i::before{
+    content: "\f00d";
+}
+
+.users .search button:hover {
+    font-size: 17px;
+}
+
+.users-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+:is(.chat-box, .users-list)::-webkit-scrollbar {
+    width: 0px;
+}
+
+.users-list a {
+    margin-bottom: 15px;
+    padding-right: 15px;
+    page-break-after: 10px;
+    border-bottom-color: #3392ff;
+}
+
+.users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+
+.users-list a .content img  {
+    height: 40px;
+    width: 40px;
+}
+
+.users-list a .content p {
+    color: #ad8a75af;
+}
+
+.users-list a .status-dot {
+    font-size: 20px;
+    color: #05ee11a1;
+
+}
+
+/* Jméno téhle classy použijeme v PHP pro zobrazení offline statusu  */
+.chat-area header .details p.offline,
+.users-list a .status-dot.offline {
+    color: #707070;
+}
+
+/* /////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+ */
+
+ /* Css kod pro chatovací pole */
+
+.chat-area header {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    color: #c4c4c4;
+}
+
+.chat-area header .back-icon {
+    font-size: 20px;
+    color: #9c9c9c;
+}
+
+.chat-area header img {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+}
+
+.chat-area header .details p {
+    color: #05ee1160;
+    font-size: 13px;
+}
+
+.chat-area header span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.chat-box {
+    overflow-y: auto;
+    font-size: 15px;
+    height: 500px;
+    background: #9c9c9c;
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 30px 30px -30px rgb(0 0 0 / 5%),
+                inset 0 -30px 30px -30px rgb(0 0 0 / 5%);
+}
+
+.chat-box .chat {
+    margin: 15px 0;
+}
+
+.chat-box .chat p {
+    word-wrap: break-word;
+    padding: 10px 15px;
+    box-shadow: 0 0 32px rgb( 0 0 0 / 8%),
+                0 16px 16px -16px rgb( 0 0 0);
+}
+
+.chat-box .outgoing {
+    display: flex;
+}
+
+/* /////////// */
+/* odesilatel */
+
+.chat-box .incoming {
+    display: flex;
+    align-items: flex-end;
+}
+
+.chat-box .incoming img {
+    width: 40px;
+    height: 40px;
+}
+
+.incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+
+.incoming .details p {
+    background: #3392ff36;
+    border-radius: 20px 20px 20px 0;
+}
+/* /////////// */
+
+
+.outgoing .details {
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+
+.outgoing .details p {
+    background-color: #272727;
+    color: #ad8a75af;
+    border-radius: 20px 20px 0 20px;
+}
+
+/* odesilaci button zpráv */
+
+.chat-area .typing-area {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.typing-area input {
+    height: 40px;
+    width: calc(100% - 60px);
+    font-size: 15px;
+    border: 2px solid #3b3b3b;
+    padding: 0 15px;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                0 3px 3px -3px rgb(255, 255, 255); */
+}
+
+.typing-area button {
+    width: 50px;
+    border: none;
+    outline: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.typing-area button i {
+    font-size: 25px;
+    color: #272b28c0;
+    position: relative;
+}
+
+/* .typing-area button i > i {
+    position: absolute;
+    font-size: 20px;
+    right: 5px;
+    color: #098f1f;
+    top: 50%;
+    transform: translateY(-40%);
+} */
